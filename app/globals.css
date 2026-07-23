@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
 :root {
+  /* Brand palette */
+  --hc-navy: #0F2E5C;      /* deep trust blue - headlines, header */
+  --hc-blue: #1B5AC8;      /* primary brand blue */
+  --hc-blue-light: #3E7BFA;/* interactive blue */
+  --hc-sky: #EAF2FF;       /* light blue tint - section bg */
+  --hc-sky-2: #F5F9FF;
+  --hc-amber: #F5A93F;     /* warm child-friendly accent */
+  --hc-coral: #FF8A65;     /* secondary warm accent */
+  --hc-ink: #14213D;       /* body text on light */
+  --hc-slate: #5B6B85;     /* secondary text */
+  --hc-line: #E2E9F5;      /* hairline borders */
+  --hc-cream: #FCFBF8;     /* warm off-white bg for alt sections */
+
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--hc-ink);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-navy: var(--hc-navy);
+  --color-brand: var(--hc-blue);
+  --color-brand-light: var(--hc-blue-light);
+  --color-sky: var(--hc-sky);
+  --color-sky-2: var(--hc-sky-2);
+  --color-amber: var(--hc-amber);
+  --color-coral: var(--hc-coral);
+  --color-ink: var(--hc-ink);
+  --color-slate: var(--hc-slate);
+  --color-line: var(--hc-line);
+  --color-cream: var(--hc-cream);
+  --font-display: var(--font-fraunces);
+  --font-sans: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-fraunces), serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Signature motif: stacked "foundation block" divider used across sections */
+.brick-row {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.brick-row span {
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: var(--hc-blue-light);
+}
+.brick-row span:nth-child(1){ width: 28px; }
+.brick-row span:nth-child(2){ width: 44px; background: var(--hc-amber);}
+.brick-row span:nth-child(3){ width: 16px; }
+
+.container-hc {
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.section-pad {
+  padding-block: clamp(3.5rem, 6vw, 6.5rem);
+}
+
+.card-shadow {
+  box-shadow: 0 1px 2px rgba(15, 46, 92, 0.04), 0 12px 32px -12px rgba(15, 46, 92, 0.14);
+}
+
+.btn-primary {
+  background: var(--hc-blue);
+  color: white;
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow .2s ease;
+  box-shadow: 0 8px 20px -6px rgba(27, 90, 200, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-primary:hover {
+  background: var(--hc-navy);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: white;
+  color: var(--hc-navy);
+  border: 1.5px solid var(--hc-line);
+  border-radius: 999px;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.btn-secondary:hover {
+  border-color: var(--hc-blue);
+  color: var(--hc-blue);
+  transform: translateY(-2px);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--hc-blue);
+}
+
+::selection {
+  background: var(--hc-amber);
+  color: var(--hc-navy);
+}
+
+:focus-visible {
+  outline: 2.5px solid var(--hc-blue-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
 }
