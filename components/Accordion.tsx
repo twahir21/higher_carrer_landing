@@ -4,7 +4,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 
-export default function Accordion({ items }) {
+interface AccordionItem {
+  q: string;
+  a: string;
+}
+
+export default function Accordion({ items }: { items: AccordionItem[] }) {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (

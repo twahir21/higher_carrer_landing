@@ -2,8 +2,8 @@ import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import Link from "next/link";
 import { CalendarDays } from "lucide-react";
-import PageHero from "../components/PageHero";
 import { NEWS } from "@/core/constants/Events";
+import PageHero from "@/components/PageHero";
 
 export const metadata = {
   title: "News & Events | Higher Career Academy",
@@ -24,7 +24,7 @@ export default function NewsPage() {
           {NEWS.map((n, i) => (
             <Reveal key={n.slug} delay={(i % 3) * 0.08}>
               <Link href={`/news/${n.slug}`} className="group block h-full rounded-2xl overflow-hidden card-shadow bg-white">
-                <div className="relative aspect-[16/10]">
+                <div className="relative aspect-16/10">
                   <PhotoPlaceholder label={n.title} tone={n.tone} className="h-full w-full group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-6">

@@ -80,7 +80,7 @@ export default function AcademicsPage() {
             </p>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-4/3">
               <PhotoPlaceholder label="Photo: Nursery pupils in a play-based lesson" tone="amber" className="h-full w-full" />
             </div>
           </Reveal>
@@ -105,7 +105,7 @@ export default function AcademicsPage() {
       <section className="section-pad bg-sky-2">
         <div className="container-hc grid lg:grid-cols-2 gap-14 items-center mb-16">
           <Reveal className="order-2 lg:order-1">
-            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-4/3">
               <PhotoPlaceholder label="Photo: Primary classroom lesson in progress" tone="sky" className="h-full w-full" />
             </div>
           </Reveal>
@@ -185,7 +185,7 @@ export default function AcademicsPage() {
             </ul>
           </Reveal>
           <Reveal delay={0.1}>
-            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-4/3">
               <PhotoPlaceholder label="Photo: Standard VII pupils in revision class" tone="sky" className="h-full w-full" />
             </div>
           </Reveal>

@@ -1,7 +1,21 @@
 import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
-import { Trophy, Palette, Sparkles, CalendarHeart } from "lucide-react";
-import PageHero from "../components/PageHero";
+import { Trophy, Palette, Sparkles, CalendarHeart, type LucideIcon } from "lucide-react";
+import PageHero from "@/components/PageHero";
+
+type Tone = "amber" | "sky";
+
+interface EventItem {
+  title: string;
+  tone: Tone;
+}
+
+interface ListSectionProps {
+  icon: LucideIcon;
+  eyebrow: string;
+  title: string;
+  items: string[];
+}
 
 export const metadata = {
   title: "Student Life | Higher Career Academy",
@@ -19,14 +33,14 @@ const CREATIVE = [
   "Music & choir", "Drama & theatre", "Art & craft", "Traditional dance",
 ];
 
-const EVENTS = [
+const EVENTS: EventItem[] = [
   { title: "Annual Sports Day", tone: "amber" },
   { title: "Cultural Week", tone: "sky" },
   { title: "End-of-Year Concert", tone: "amber" },
   { title: "Prize-Giving Day", tone: "sky" },
 ];
 
-function ListSection({ icon: Icon, eyebrow, title, items, tone = "sky" }) {
+function ListSection({ icon: Icon, eyebrow, title, items }: ListSectionProps) {
   return (
     <Reveal>
       <div className="h-full rounded-3xl bg-white p-8 card-shadow">
@@ -36,7 +50,7 @@ function ListSection({ icon: Icon, eyebrow, title, items, tone = "sky" }) {
         <span className="eyebrow">{eyebrow}</span>
         <h3 className="font-display text-xl font-semibold text-navy mt-2 mb-4">{title}</h3>
         <ul className="space-y-2.5">
-          {items.map((item) => (
+            {items.map((item: string) => (
             <li key={item} className="flex items-center gap-2.5 text-sm text-slate">
               <span className="h-1.5 w-1.5 rounded-full bg-amber" />
               {item}
@@ -75,7 +89,7 @@ export default function StudentLifePage() {
             </h2>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {EVENTS.map((e, i) => (
+            {EVENTS.map((e: EventItem, i: number) => (
               <Reveal key={e.title} delay={i * 0.07}>
                 <div className="rounded-2xl overflow-hidden card-shadow group">
                   <div className="relative aspect-square">
@@ -102,7 +116,7 @@ export default function StudentLifePage() {
             </h2>
           </Reveal>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            {Array.from({ length: 8 }).map((_, i) => (
+            {Array.from({ length: 8 }).map((_: unknown, i: number) => (
               <Reveal key={i} delay={i * 0.04}>
                 <div className="rounded-2xl overflow-hidden card-shadow aspect-square">
                   <PhotoPlaceholder

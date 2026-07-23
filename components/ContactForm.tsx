@@ -7,7 +7,7 @@ import { Send, CheckCircle2 } from "lucide-react";
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     // Hook this up to your email/API endpoint of choice.
     setSent(true);
@@ -73,7 +73,7 @@ export default function ContactForm() {
   );
 }
 
-function Field({ label, id, ...props }) {
+function Field({ label, id, ...props }: { label: string; id: string } & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <div>
       <label htmlFor={id} className="block text-sm font-medium text-navy mb-1.5">

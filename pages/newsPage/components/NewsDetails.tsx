@@ -9,7 +9,7 @@ export function generateStaticParams() {
   return NEWS.map((n) => ({ slug: n.slug }));
 }
 
-export function generateMetadata({ params }) {
+export function generateMetadata({ params }: { params: { slug: string } }) {
   const item = NEWS.find((n) => n.slug === params.slug);
   if (!item) return {};
   return {
@@ -18,7 +18,7 @@ export function generateMetadata({ params }) {
   };
 }
 
-export default function NewsDetailPage({ params }) {
+export default function NewsDetailPage({ params }: { params: { slug: string } }) {
   const index = NEWS.findIndex((n) => n.slug === params.slug);
   if (index === -1) notFound();
   const item = NEWS[index];

@@ -1,4 +1,4 @@
-import StudentLifePage from "@/screens/StudentLife";
+import StudentLifePage from "@/pages/studentLifePage";
 
 export default function StudentLife () {
     return <StudentLifePage />
