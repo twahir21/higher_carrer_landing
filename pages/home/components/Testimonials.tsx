@@ -21,12 +21,12 @@ const REVIEWS = [
 
 export default function Testimonials() {
   return (
-    <section className="section-pad bg-[var(--hc-sky-2)]">
+    <section className="section-pad bg-sky-2">
       <div className="container-hc">
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="eyebrow">Parent Testimonials</span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
-            Trusted by families across Dar es Salaam
+            Trusted by families across Zanzibar
           </h2>
         </Reveal>
 

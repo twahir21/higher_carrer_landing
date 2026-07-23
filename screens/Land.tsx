@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 
 export default function PageHero({ eyebrow, title, text }) {
   return (
-    <section className="relative overflow-hidden bg-[var(--hc-sky-2)] border-b border-line">
+    <section className="relative overflow-hidden bg-sky-2 border-b border-line">
       <div className="pointer-events-none absolute -top-20 -right-20 h-72 w-72 rounded-full bg-sky blur-3xl" />
       <div className="container-hc relative py-16 sm:py-20 text-center">
         <Reveal>

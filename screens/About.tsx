@@ -28,7 +28,7 @@ const TEACHERS = [
 const ACHIEVEMENTS = [
   "Top 5 primary school performance in the district, 2023–2025 examinations",
   "Regional Science Fair gold award winners, three consecutive years",
-  "Inter-school football champions, Dar es Salaam zonal league, 2024",
+  "Inter-school football champions, Zanzibar zonal league, 2024",
   "Accredited member of the Tanzania Association of Private Schools",
 ];
 
@@ -56,7 +56,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-slate leading-relaxed mb-4">
               Higher Career Academy was founded in 2012 by a small group of
-              educators who believed Dar es Salaam families deserved an
+              educators who believed Zanzibar families deserved an
               affordable, high-quality alternative for early childhood and
               primary education. We began with a single nursery classroom of
               eighteen pupils.
@@ -73,7 +73,7 @@ export default function AboutPage() {
       </section>
 
       {/* Vision / Mission */}
-      <section className="section-pad bg-[var(--hc-sky-2)]">
+      <section className="section-pad bg-sky-2">
         <div className="container-hc grid md:grid-cols-2 gap-6">
           <Reveal>
             <div className="h-full rounded-3xl bg-white p-9 card-shadow">

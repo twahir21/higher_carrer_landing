@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, PhoneCall, ShieldCheck, Star } from "lucide-react";
+import { ArrowRight, Play, ShieldCheck, Star } from "lucide-react";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 
 export default function Hero() {
@@ -22,7 +22,7 @@ export default function Hero() {
           >
             <span className="brick-row"><span /><span /><span /></span>
             <span className="text-xs font-semibold text-navy ">
-              Nursery &amp; Primary Education in Dar es Salaam
+              Nursery &amp; Primary Education in Zanzibar
             </span>
           </motion.div>
 
@@ -32,9 +32,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-navy "
           >
-            Building Strong Foundations for a{" "}
+            Building Tomorrow&apos;s Experts{" "}
             <span className="relative whitespace-nowrap">
-              Successful Future
+              Today
               <svg
                 aria-hidden
                 viewBox="0 0 300 12"
@@ -71,9 +71,17 @@ export default function Hero() {
             <Link href="/admissions" className="btn-primary">
               Apply for Admission <ArrowRight size={18} />
             </Link>
-            <Link href="/contact" className="btn-secondary">
-              <PhoneCall size={17} /> Contact Us
-            </Link>
+            <button
+              className="btn-secondary group"
+            >
+              <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky">
+                <Play
+                  size={15}
+                  className="fill-brand text-brand group-hover:scale-110 transition"
+                />
+              </span>
+              Watch School Tour
+            </button>
           </motion.div>
 
           <motion.div

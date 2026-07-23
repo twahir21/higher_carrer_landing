@@ -16,7 +16,7 @@ export const metadata = {
 };
 
 const INFO = [
-  { icon: MapPin, title: "Visit Us", text: "Plot 24, Mikocheni Street, Dar es Salaam, Tanzania" },
+  { icon: MapPin, title: "Visit Us", text: "Plot 24, Mikocheni Street, Zanzibar, Tanzania" },
   { icon: Phone, title: "Call Us", text: "+255 700 000 000" },
   { icon: Mail, title: "Email Us", text: "info@highercareeracademy.ac.tz" },
   { icon: Clock, title: "Working Hours", text: "Mon – Fri, 7:00 AM – 5:00 PM" },
@@ -63,7 +63,7 @@ export default function ContactPage() {
             <div className="rounded-2xl overflow-hidden card-shadow aspect-[4/5] bg-sky flex flex-col items-center justify-center gap-3 text-brand">
               <Map size={36} strokeWidth={1.6} />
               <p className="text-sm font-medium px-6 text-center">
-                Google Maps embed placeholder — Mikocheni Street, Dar es Salaam
+                Google Maps embed placeholder — Mikocheni Street, Zanzibar
               </p>
             </div>
 

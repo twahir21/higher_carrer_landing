@@ -54,7 +54,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Requirements */}
-      <section className="section-pad bg-[var(--hc-sky-2)]">
+      <section className="section-pad bg-sky-2">
         <div className="container-hc">
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">Requirements</span>
@@ -103,7 +103,7 @@ export default function AdmissionsPage() {
               </thead>
               <tbody>
                 {FEES.map((f, i) => (
-                  <tr key={f.level} className={i % 2 ? "bg-[var(--hc-sky-2)]" : "bg-white"}>
+                  <tr key={f.level} className={i % 2 ? "bg-sky-2" : "bg-white"}>
                     <td className="px-6 py-4 font-medium text-[var(--hc-navy)]">{f.level}</td>
                     <td className="px-6 py-4 text-sm text-slate">{f.tuition}</td>
                     <td className="px-6 py-4 text-sm text-slate">{f.registration}</td>
@@ -122,7 +122,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section-pad bg-[var(--hc-sky-2)]">
+      <section className="section-pad bg-sky-2">
         <div className="container-hc max-w-3xl">
           <Reveal className="text-center mb-12">
             <span className="eyebrow">Frequently Asked Questions</span>

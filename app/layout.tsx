@@ -17,7 +17,7 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Higher Career Academy | Nursery & Primary School, Dar es Salaam",
+  title: "Higher Career Academy | Nursery & Primary School, Zanzibar",
   description:
     "Higher Career Academy provides quality nursery and primary education in Tanzania, building strong foundations for a successful future through qualified teachers and a safe, inspiring learning environment.",
 };

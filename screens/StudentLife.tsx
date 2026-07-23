@@ -57,7 +57,7 @@ export default function StudentLifePage() {
         text="Sports, clubs, creative arts, and school events shape well-rounded learners at Higher Career Academy."
       />
 
-      <section className="section-pad bg-[var(--hc-sky-2)]">
+      <section className="section-pad bg-sky-2">
         <div className="container-hc grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <ListSection icon={Trophy} eyebrow="Physical Education" title="Sports" items={SPORTS} />
           <ListSection icon={Sparkles} eyebrow="After School" title="Clubs" items={CLUBS} />

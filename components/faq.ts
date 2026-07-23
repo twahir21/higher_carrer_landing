@@ -36,7 +36,7 @@ export const GENERAL_FAQ = [
   },
   {
     q: "Do you provide transportation?",
-    a: "Yes, we operate supervised school buses covering key routes across Dar es Salaam. Contact our office to check whether your neighbourhood is on an existing route.",
+    a: "Yes, we operate supervised school buses covering key routes across Zanzibar. Contact our office to check whether your neighbourhood is on an existing route.",
   },
   {
     q: "What facilities are available?",

@@ -102,7 +102,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Primary curriculum */}
-      <section className="section-pad bg-[var(--hc-sky-2)]">
+      <section className="section-pad bg-sky-2">
         <div className="container-hc grid lg:grid-cols-2 gap-14 items-center mb-16">
           <Reveal className="order-2 lg:order-1">
             <div className="relative rounded-3xl overflow-hidden card-shadow aspect-[4/3]">

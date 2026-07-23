@@ -1,4 +1,3 @@
-import Reveal from "@/components/Reveal";
 import {
   Heart,
   BookOpenCheck,
@@ -7,6 +6,8 @@ import {
   Utensils,
   Trophy,
 } from "lucide-react";
+import Reveal from "@/components/Reveal";
+import { StaggerGroup, StaggerItem } from "@/components/StaggerGrp";
 
 const REASONS = [
   {
@@ -45,6 +46,7 @@ export default function WhyChooseUs() {
   return (
     <section className="section-pad">
       <div className="container-hc">
+        {/* Header Reveal */}
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="eyebrow">Why Choose Us</span>
           <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
@@ -52,19 +54,25 @@ export default function WhyChooseUs() {
           </h2>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {REASONS.map((r, i) => (
-            <Reveal key={r.title} delay={i * 0.06}>
-              <div className="h-full rounded-2xl border border-line p-7 hover:border-brand-light hover:card-shadow transition-all">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navytext-white mb-5">
+        {/* Staggered Grid Container */}
+        <StaggerGroup
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          staggerDelay={0.3} // 2x standard delay for a rich cascading effect
+        >
+          {REASONS.map((r) => (
+            <StaggerItem key={r.title} className="h-full">
+              <div className="h-full rounded-2xl border border-line p-7 hover:border-brand-light hover:card-shadow transition-all group">
+                {/* Icon Container */}
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy text-white mb-5 group-hover:scale-105 transition-transform">
                   <r.icon size={22} />
                 </div>
+                {/* Text Content */}
                 <h3 className="font-semibold text-navy mb-2">{r.title}</h3>
                 <p className="text-sm text-slate leading-relaxed">{r.text}</p>
               </div>
-            </Reveal>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );

@@ -26,7 +26,7 @@ export default function NewsDetailPage({ params }) {
 
   return (
     <>
-      <section className="relative overflow-hidden bg-[var(--hc-sky-2)] border-b border-line">
+      <section className="relative overflow-hidden bg-sky-2 border-b border-line">
         <div className="container-hc py-14 sm:py-16">
           <Reveal>
             <Link href="/news" className="inline-flex items-center gap-1.5 text-sm font-medium text-brand mb-6">
@@ -57,7 +57,7 @@ export default function NewsDetailPage({ params }) {
           </div>
 
           <Reveal delay={0.15}>
-            <div className="rounded-2xl bg-[var(--hc-sky-2)] p-7">
+            <div className="rounded-2xl bg-sky-2 p-7">
               <h3 className="font-display text-lg font-semibold text-navy mb-5">
                 More News &amp; Events
               </h3>

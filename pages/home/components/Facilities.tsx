@@ -1,5 +1,6 @@
 import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import { StaggerGroup, StaggerItem } from "@/components/StaggerGrp";
 
 const FACILITIES = [
   { title: "Modern Classrooms", tone: "sky" },
@@ -14,27 +15,40 @@ export default function Facilities() {
   return (
     <section className="section-pad">
       <div className="container-hc">
+        {/* Header Reveal */}
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="eyebrow">Our Facilities</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy  mt-3">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
             A campus built for young learners
           </h2>
         </Reveal>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {FACILITIES.map((f, i) => (
-            <Reveal key={f.title} delay={i * 0.05}>
-              <div className="rounded-2xl overflow-hidden card-shadow group">
-                <div className="relative aspect-4/3">
-                  <PhotoPlaceholder label={`Photo: ${f.title}`} tone={f.tone} className="h-full w-full group-hover:scale-105 transition-transform duration-500" />
+        {/* Staggered Facilities Grid */}
+        <StaggerGroup
+          className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+          staggerDelay={0.4} // 2x delay cadence matching the other sections
+        >
+          {FACILITIES.map((f) => (
+            <StaggerItem key={f.title} className="h-full">
+              <div className="rounded-2xl overflow-hidden card-shadow group border border-line hover:border-brand-light transition-colors h-full flex flex-col">
+                {/* Photo Container with Smooth Hover Scale */}
+                <div className="relative aspect-4/3 overflow-hidden">
+                  <PhotoPlaceholder
+                    label={`Photo: ${f.title}`}
+                    tone={f.tone}
+                    className="h-full w-full group-hover:scale-105 transition-transform duration-500 ease-out"
+                  />
                 </div>
-                <div className="p-5 bg-white">
-                  <h3 className="font-semibold text-navy ">{f.title}</h3>
+                {/* Title Card Footer */}
+                <div className="p-5 bg-white flex-1 flex items-center">
+                  <h3 className="font-semibold text-navy group-hover:text-brand transition-colors">
+                    {f.title}
+                  </h3>
                 </div>
               </div>
-            </Reveal>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerGroup>
       </div>
     </section>
   );
