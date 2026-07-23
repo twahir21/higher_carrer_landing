@@ -1,6 +1,12 @@
 import Reveal from "@/components/Reveal";
 
-export default function PageHero({ eyebrow, title, text }) {
+interface PageHeroProps {
+  eyebrow?: string;
+  title: string;
+  text?: string;
+}
+
+export default function PageHero({ eyebrow, title, text }: PageHeroProps) {
   return (
     <section className="relative overflow-hidden bg-sky-2 border-b border-line">
       <div className="pointer-events-none absolute -top-20 -right-20 h-72 w-72 rounded-full bg-sky blur-3xl" />

@@ -5,7 +5,50 @@ import { Landmark, Copy, Check, Info } from "lucide-react";
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 
-const nursery = {
+interface FeeItem {
+  item: string;
+  amount: string;
+}
+
+interface TuitionItem {
+  period: string;
+  amount: string;
+}
+
+interface ExtraItem {
+  label: string;
+  amount: string;
+}
+
+interface LevelData {
+  registration: FeeItem[];
+  registrationTotal: string;
+  tuition: TuitionItem[];
+  tuitionTotal: string;
+  materials: string[];
+  extras: ExtraItem[];
+}
+
+type Level = "nursery" | "primary";
+
+interface FeeTableProps {
+  headers: [string, string];
+  rows: [string, string][];
+  totalLabel: string;
+  totalValue: string;
+  accent: Level;
+}
+
+interface LevelPanelProps {
+  data: LevelData;
+  level: Level;
+}
+
+interface PaymentInfoProps {
+  level: Level;
+}
+
+const nursery: LevelData = {
   registration: [
     { item: "Form Collection", amount: "5,000/=" },
     { item: "Form Submission", amount: "25,000/=" },
@@ -37,7 +80,7 @@ const nursery = {
   ],
 };
 
-const primary = {
+const primary: LevelData = {
   registration: [
     { item: "Form Collection", amount: "5,000/=" },
     { item: "Form Submission", amount: "30,000/=" },
@@ -60,7 +103,7 @@ const primary = {
   ],
 };
 
-function FeeTable({ headers, rows, totalLabel, totalValue, accent }) {
+function FeeTable({ headers, rows, totalLabel, totalValue, accent }: FeeTableProps) {
   const totalClasses =
     accent === "primary"
       ? "bg-amber text-navy"
@@ -69,7 +112,7 @@ function FeeTable({ headers, rows, totalLabel, totalValue, accent }) {
   return (
     <div className="rounded-2xl border border-line overflow-hidden">
       <div className="overflow-x-auto">
-        <table className="w-full text-sm min-w-[420px]">
+        <table className="w-full text-sm min-w-105">
           <thead>
             <tr className="bg-sky text-navy">
               <th className="text-left font-semibold px-5 py-3.5">{headers[0]}</th>
@@ -103,7 +146,7 @@ function FeeTable({ headers, rows, totalLabel, totalValue, accent }) {
   );
 }
 
-function LevelPanel({ data, level }) {
+function LevelPanel({ data, level }: LevelPanelProps) {
   return (
     <div className="space-y-10">
       {/* Registration */}
@@ -182,7 +225,7 @@ function LevelPanel({ data, level }) {
   );
 }
 
-function PaymentInfo({ level }) {
+function PaymentInfo({ level }: PaymentInfoProps) {
   const [copied, setCopied] = useState(false);
   const accountNo = "0726551001";
   const isPrimary = level === "primary";
@@ -252,7 +295,7 @@ function PaymentInfo({ level }) {
 }
 
 export default function FeesPage() {
-  const [level, setLevel] = useState("nursery");
+  const [level, setLevel] = useState<Level>("nursery");
   const data = level === "nursery" ? nursery : primary;
 
   return (
@@ -269,10 +312,10 @@ export default function FeesPage() {
           <Reveal>
             <div className="flex justify-center mb-6">
               <div className="flex w-full sm:w-auto rounded-full bg-sky p-1.5 sm:p-2">
-                {[
+                {([
                   { key: "nursery", label: "Nursery" },
                   { key: "primary", label: "Primary" },
-                ].map((tab) => {
+                ] as const).map((tab) => {
                   const isActive = level === tab.key;
                   const activeColor =
                     tab.key === "primary" ? "bg-amber" : "bg-navy";
