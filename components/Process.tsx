@@ -13,15 +13,15 @@ export default function ProcessSteps() {
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       {STEPS.map((s, i) => (
         <Reveal key={s.title} delay={i * 0.08}>
-          <div className="relative h-full rounded-2xl border border-[var(--hc-line)] p-7 pt-9 hover:card-shadow transition-all">
-            <span className="absolute -top-4 left-7 flex h-9 w-9 items-center justify-center rounded-full bg-[var(--hc-blue)] text-white text-sm font-semibold">
+          <div className="relative h-full rounded-2xl border border-line p-7 pt-9 hover:card-shadow transition-all">
+            <span className="absolute -top-4 left-7 flex h-9 w-9 items-center justify-center rounded-full bg-brand text-white text-sm font-semibold">
               {i + 1}
             </span>
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--hc-sky)] text-[var(--hc-blue)] mb-4">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky text-brand mb-4">
               <s.icon size={22} />
             </div>
-            <h3 className="font-semibold text-[var(--hc-navy)] mb-2">{s.title}</h3>
-            <p className="text-sm text-[var(--hc-slate)] leading-relaxed">{s.text}</p>
+            <h3 className="font-semibold text-navy mb-2">{s.title}</h3>
+            <p className="text-sm text-slate leading-relaxed">{s.text}</p>
           </div>
         </Reveal>
       ))}

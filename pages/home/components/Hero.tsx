@@ -7,9 +7,9 @@ import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-[var(--hc-sky-2)]">
+    <section className="relative overflow-hidden bg-sky-2">
       {/* soft ambient shapes */}
-      <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-[var(--hc-sky)] blur-3xl" />
+      <div className="pointer-events-none absolute -top-24 -right-24 h-96 w-96 rounded-full bg-sky blur-3xl" />
       <div className="pointer-events-none absolute top-40 -left-32 h-72 w-72 rounded-full bg-[#FFE9CF] blur-3xl opacity-70" />
 
       <div className="container-hc relative grid lg:grid-cols-2 gap-14 items-center py-14 lg:py-20">
@@ -21,7 +21,7 @@ export default function Hero() {
             className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 card-shadow mb-6"
           >
             <span className="brick-row"><span /><span /><span /></span>
-            <span className="text-xs font-semibold text-[var(--hc-navy)]">
+            <span className="text-xs font-semibold text-navy ">
               Nursery &amp; Primary Education in Dar es Salaam
             </span>
           </motion.div>
@@ -30,7 +30,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-[var(--hc-navy)]"
+            className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-navy "
           >
             Building Strong Foundations for a{" "}
             <span className="relative whitespace-nowrap">
@@ -38,7 +38,7 @@ export default function Hero() {
               <svg
                 aria-hidden
                 viewBox="0 0 300 12"
-                className="absolute left-0 -bottom-1 w-full text-[var(--hc-amber)]"
+                className="absolute left-0 -bottom-1 w-full text-amber"
               >
                 <path
                   d="M2 9C60 2 240 2 298 9"
@@ -55,7 +55,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-6 text-lg text-[var(--hc-slate)] leading-relaxed max-w-xl"
+            className="mt-6 text-lg text-slate leading-relaxed max-w-xl"
           >
             Higher Career Academy delivers quality nursery and primary education
             through qualified teachers, a safe campus, and a curriculum designed
@@ -80,14 +80,14 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.45 }}
-            className="mt-10 flex items-center gap-6 text-sm text-[var(--hc-slate)]"
+            className="mt-10 flex items-center gap-6 text-sm text-slate"
           >
             <div className="flex items-center gap-1.5">
-              <ShieldCheck size={18} className="text-[var(--hc-blue)]" />
+              <ShieldCheck size={18} className="text-brand" />
               Registered by MoEST
             </div>
             <div className="flex items-center gap-1.5">
-              <Star size={18} className="text-[var(--hc-amber)] fill-[var(--hc-amber)]" />
+              <Star size={18} className="text-amber fill-amber" />
               Trusted by 400+ families
             </div>
           </motion.div>
@@ -99,7 +99,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="relative"
         >
-          <div className="relative rounded-[2rem] overflow-hidden card-shadow aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
+          <div className="relative rounded-4xl overflow-hidden card-shadow aspect-4/5 sm:aspect-5/4 lg:aspect-4/5">
             <PhotoPlaceholder
               label="Photo: Happy students learning together in a modern Higher Career Academy classroom"
               tone="sky"
@@ -113,12 +113,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.6 }}
             className="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 rounded-2xl bg-white p-4 pr-6 card-shadow"
           >
-            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--hc-sky)] text-[var(--hc-blue)] font-display font-semibold">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky text-brand font-display font-semibold">
               1:15
             </div>
             <div>
-              <p className="text-sm font-semibold text-[var(--hc-navy)]">Teacher-to-pupil ratio</p>
-              <p className="text-xs text-[var(--hc-slate)]">Personalised attention, always</p>
+              <p className="text-sm font-semibold text-navy ">Teacher-to-pupil ratio</p>
+              <p className="text-xs text-slate">Personalised attention, always</p>
             </div>
           </motion.div>
 
@@ -126,7 +126,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.7 }}
-            className="absolute -top-5 -right-5 hidden sm:block rounded-2xl bg-[var(--hc-navy)] text-white px-5 py-3 card-shadow"
+            className="absolute -top-5 -right-5 hidden sm:block rounded-2xl bg-navy text-white px-5 py-3 card-shadow"
           >
             <p className="text-xs text-white/70">Est.</p>
             <p className="font-display text-lg font-semibold">2012</p>

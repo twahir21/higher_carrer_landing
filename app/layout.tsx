@@ -22,13 +22,13 @@ export const metadata = {
     "Higher Career Academy provides quality nursery and primary education in Tanzania, building strong foundations for a successful future through qualified teachers and a safe, inspiring learning environment.",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
       lang="en"
       className={`${fraunces.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-white text-[var(--hc-ink)]">
+      <body className="min-h-full flex flex-col bg-white text-ink">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

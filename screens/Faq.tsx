@@ -31,7 +31,7 @@ export default function FaqPage() {
       <section className="pb-24">
         <div className="container-hc">
           <Reveal>
-            <div className="rounded-3xl bg-[var(--hc-navy)] text-white px-8 py-12 sm:px-14 sm:py-14 text-center">
+            <div className="rounded-3xl bg-navytext-white px-8 py-12 sm:px-14 sm:py-14 text-center">
               <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-3">
                 Still have questions?
               </h2>
@@ -40,7 +40,7 @@ export default function FaqPage() {
                 that's not covered here.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
-                <Link href="/contact" className="rounded-full bg-white text-[var(--hc-navy)] font-semibold px-7 py-3.5 inline-flex items-center gap-2 hover:-translate-y-1 transition-transform">
+                <Link href="/contact" className="rounded-full bg-white text-navy font-semibold px-7 py-3.5 inline-flex items-center gap-2 hover:-translate-y-1 transition-transform">
                   <PhoneCall size={17} /> Contact Us
                 </Link>
                 <Link href="/admissions" className="rounded-full border border-white/40 text-white font-semibold px-7 py-3.5 inline-flex items-center gap-2 hover:bg-white/10 transition-colors">

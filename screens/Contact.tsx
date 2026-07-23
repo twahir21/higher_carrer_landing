@@ -35,13 +35,13 @@ export default function ContactPage() {
         <div className="container-hc grid lg:grid-cols-2 gap-6 mb-16">
           {INFO.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.06} className="sm:col-span-1">
-              <div className="flex items-center gap-4 rounded-2xl border border-[var(--hc-line)] p-6 h-full">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[var(--hc-sky)] text-[var(--hc-blue)]">
+              <div className="flex items-center gap-4 rounded-2xl border border-line p-6 h-full">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-sky text-brand">
                   <item.icon size={20} />
                 </div>
                 <div>
                   <p className="font-semibold text-[var(--hc-navy)]">{item.title}</p>
-                  <p className="text-sm text-[var(--hc-slate)]">{item.text}</p>
+                  <p className="text-sm text-slate">{item.text}</p>
                 </div>
               </div>
             </Reveal>
@@ -50,17 +50,17 @@ export default function ContactPage() {
 
         <div className="container-hc grid lg:grid-cols-[1fr_0.85fr] gap-14">
           <Reveal>
-            <h2 className="font-display text-2xl font-semibold text-[var(--hc-navy)] mb-6">
+            <h2 className="font-display text-2xl font-semibold text-navy mb-6">
               Send us a message
             </h2>
             <ContactForm />
           </Reveal>
 
           <Reveal delay={0.1}>
-            <h2 className="font-display text-2xl font-semibold text-[var(--hc-navy)] mb-6">
+            <h2 className="font-display text-2xl font-semibold text-navy mb-6">
               Find us on the map
             </h2>
-            <div className="rounded-2xl overflow-hidden card-shadow aspect-[4/5] bg-[var(--hc-sky)] flex flex-col items-center justify-center gap-3 text-[var(--hc-blue)]">
+            <div className="rounded-2xl overflow-hidden card-shadow aspect-[4/5] bg-sky flex flex-col items-center justify-center gap-3 text-brand">
               <Map size={36} strokeWidth={1.6} />
               <p className="text-sm font-medium px-6 text-center">
                 Google Maps embed placeholder — Mikocheni Street, Dar es Salaam
@@ -74,7 +74,7 @@ export default function ContactPage() {
                   key={i}
                   href="#"
                   aria-label="Social media link"
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--hc-sky)] text-[var(--hc-blue)] hover:bg-[var(--hc-blue)] hover:text-white transition-colors"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-sky text-brand hover:bg-brand hover:text-white transition-colors"
                 >
                   <Icon size={17} />
                 </a>

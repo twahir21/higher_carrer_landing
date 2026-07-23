@@ -9,7 +9,7 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--hc-navy)] text-white">
+    <footer className="bg-navy text-white">
       <div className="container-hc py-16">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
@@ -29,7 +29,7 @@ export default function Footer() {
                   key={i}
                   href="#"
                   aria-label="Social media link"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-[var(--hc-blue-light)] transition-colors"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 hover:bg-brand-light transition-colors"
                 >
                   <Icon size={16} />
                 </a>
@@ -68,10 +68,10 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-white/80">
-              <li className="flex gap-2.5"><MapPin size={17} className="shrink-0 mt-0.5 text-[var(--hc-amber)]" /> Plot 24, Mikocheni Street, Dar es Salaam, Tanzania</li>
-              <li className="flex gap-2.5"><Phone size={17} className="shrink-0 mt-0.5 text-[var(--hc-amber)]" /> +255 700 000 000</li>
-              <li className="flex gap-2.5"><Mail size={17} className="shrink-0 mt-0.5 text-[var(--hc-amber)]" /> info@highercareeracademy.ac.tz</li>
-              <li className="flex gap-2.5"><Clock size={17} className="shrink-0 mt-0.5 text-[var(--hc-amber)]" /> Mon &ndash; Fri, 7:00 AM &ndash; 5:00 PM</li>
+              <li className="flex gap-2.5"><MapPin size={17} className="shrink-0 mt-0.5 text-amber" /> Plot 24, Mikocheni Street, Dar es Salaam, Tanzania</li>
+              <li className="flex gap-2.5"><Phone size={17} className="shrink-0 mt-0.5 text-amber" /> +255 700 000 000</li>
+              <li className="flex gap-2.5"><Mail size={17} className="shrink-0 mt-0.5 text-amber" /> info@highercareeracademy.ac.tz</li>
+              <li className="flex gap-2.5"><Clock size={17} className="shrink-0 mt-0.5 text-amber" /> Mon &ndash; Fri, 7:00 AM &ndash; 5:00 PM</li>
             </ul>
           </div>
         </div>

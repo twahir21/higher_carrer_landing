@@ -35,14 +35,14 @@ export default function Header() {
     >
       <div className="container-hc flex items-center justify-between h-20">
         <Link href="/" className="flex items-center gap-3 group">
-          <span className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-[var(--hc-blue)] text-white shadow-[0_8px_18px_-6px_rgba(27,90,200,0.5)] group-hover:scale-105 transition-transform">
+          <span className="relative flex h-11 w-11 items-center justify-center rounded-2xl bg-brand text-white shadow-[0_8px_18px_-6px_rgba(27,90,200,0.5)] group-hover:scale-105 transition-transform">
             <GraduationCap size={22} strokeWidth={2.2} />
           </span>
           <span className="leading-tight">
             <span className="block font-display text-lg font-semibold text-[var(--hc-navy)]">
               Higher Career
             </span>
-            <span className="block text-[11px] tracking-wide text-[var(--hc-slate)] font-medium">
+            <span className="block text-[11px] tracking-wide text-slate font-medium">
               ACADEMY &middot; Nursery &amp; Primary
             </span>
           </span>
@@ -53,7 +53,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="px-3.5 py-2 rounded-full text-[15px] font-medium text-[var(--hc-ink)] hover:text-[var(--hc-blue)] hover:bg-[var(--hc-sky)] transition-colors"
+              className="px-3.5 py-2 rounded-full text-[15px] font-medium text-[var(--hc-ink)] hover:text-brand hover:bg-sky transition-colors"
             >
               {item.label}
             </Link>
@@ -69,7 +69,7 @@ export default function Header() {
         <button
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden flex items-center justify-center h-11 w-11 rounded-xl border border-[var(--hc-line)] text-[var(--hc-navy)]"
+          className="lg:hidden flex items-center justify-center h-11 w-11 rounded-xl border border-line text-[var(--hc-navy)]"
         >
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
@@ -82,7 +82,7 @@ export default function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="lg:hidden overflow-hidden border-t border-[var(--hc-line)] bg-white"
+            className="lg:hidden overflow-hidden border-t border-line bg-white"
           >
             <nav className="container-hc flex flex-col py-3">
               {NAV.map((item) => (
@@ -90,7 +90,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="py-3 text-[16px] font-medium text-[var(--hc-ink)] border-b border-[var(--hc-line)] last:border-b-0"
+                  className="py-3 text-[16px] font-medium text-[var(--hc-ink)] border-b border-line last:border-b-0"
                 >
                   {item.label}
                 </Link>

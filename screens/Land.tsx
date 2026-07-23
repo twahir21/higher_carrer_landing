@@ -2,16 +2,16 @@ import Reveal from "@/components/Reveal";
 
 export default function PageHero({ eyebrow, title, text }) {
   return (
-    <section className="relative overflow-hidden bg-[var(--hc-sky-2)] border-b border-[var(--hc-line)]">
-      <div className="pointer-events-none absolute -top-20 -right-20 h-72 w-72 rounded-full bg-[var(--hc-sky)] blur-3xl" />
+    <section className="relative overflow-hidden bg-[var(--hc-sky-2)] border-b border-line">
+      <div className="pointer-events-none absolute -top-20 -right-20 h-72 w-72 rounded-full bg-sky blur-3xl" />
       <div className="container-hc relative py-16 sm:py-20 text-center">
         <Reveal>
           {eyebrow && <span className="eyebrow">{eyebrow}</span>}
-          <h1 className="font-display text-4xl sm:text-5xl font-semibold text-[var(--hc-navy)] mt-3 max-w-3xl mx-auto leading-tight">
+          <h1 className="font-display text-4xl sm:text-5xl font-semibold text-navy mt-3 max-w-3xl mx-auto leading-tight">
             {title}
           </h1>
           {text && (
-            <p className="text-[var(--hc-slate)] max-w-2xl mx-auto mt-5 leading-relaxed">
+            <p className="text-slate max-w-2xl mx-auto mt-5 leading-relaxed">
               {text}
             </p>
           )}

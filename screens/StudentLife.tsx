@@ -30,15 +30,15 @@ function ListSection({ icon: Icon, eyebrow, title, items, tone = "sky" }) {
   return (
     <Reveal>
       <div className="h-full rounded-3xl bg-white p-8 card-shadow">
-        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--hc-sky)] text-[var(--hc-blue)] mb-5">
+        <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky text-brand mb-5">
           <Icon size={22} />
         </div>
         <span className="eyebrow">{eyebrow}</span>
-        <h3 className="font-display text-xl font-semibold text-[var(--hc-navy)] mt-2 mb-4">{title}</h3>
+        <h3 className="font-display text-xl font-semibold text-navy mt-2 mb-4">{title}</h3>
         <ul className="space-y-2.5">
           {items.map((item) => (
-            <li key={item} className="flex items-center gap-2.5 text-sm text-[var(--hc-slate)]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--hc-amber)]" />
+            <li key={item} className="flex items-center gap-2.5 text-sm text-slate">
+              <span className="h-1.5 w-1.5 rounded-full bg-amber" />
               {item}
             </li>
           ))}
@@ -70,7 +70,7 @@ export default function StudentLifePage() {
         <div className="container-hc">
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">School Events</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
               Moments our pupils look forward to
             </h2>
           </Reveal>
@@ -82,7 +82,7 @@ export default function StudentLifePage() {
                     <PhotoPlaceholder label={e.title} tone={e.tone} className="h-full w-full group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="p-4 bg-white flex items-center gap-2">
-                    <CalendarHeart size={16} className="text-[var(--hc-blue)]" />
+                    <CalendarHeart size={16} className="text-brand" />
                     <h3 className="text-sm font-semibold text-[var(--hc-navy)]">{e.title}</h3>
                   </div>
                 </div>
@@ -93,11 +93,11 @@ export default function StudentLifePage() {
       </section>
 
       {/* Gallery preview */}
-      <section className="section-pad bg-[var(--hc-cream)]">
+      <section className="section-pad bg-cream">
         <div className="container-hc">
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">Gallery</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
               Students in action
             </h2>
           </Reveal>

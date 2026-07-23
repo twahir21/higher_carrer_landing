@@ -11,11 +11,11 @@ export default function PhotoPlaceholder({
   tone = "sky",
 }) {
   const tones = {
-    sky: "from-[var(--hc-sky)] to-[#DCE9FF]",
+    sky: "from-sky to-[#DCE9FF]",
     navy: "from-[#1B5AC8] to-[var(--hc-navy)]",
     amber: "from-[#FFE3BE] to-[#FFD199]",
   };
-  const textTone = tone === "navy" ? "text-white/80" : "text-[var(--hc-blue)]";
+  const textTone = tone === "navy" ? "text-white/80" : "text-brand";
 
   return (
     <div

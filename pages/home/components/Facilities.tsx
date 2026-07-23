@@ -16,7 +16,7 @@ export default function Facilities() {
       <div className="container-hc">
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="eyebrow">Our Facilities</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy  mt-3">
             A campus built for young learners
           </h2>
         </Reveal>
@@ -25,11 +25,11 @@ export default function Facilities() {
           {FACILITIES.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.05}>
               <div className="rounded-2xl overflow-hidden card-shadow group">
-                <div className="relative aspect-[4/3]">
+                <div className="relative aspect-4/3">
                   <PhotoPlaceholder label={`Photo: ${f.title}`} tone={f.tone} className="h-full w-full group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5 bg-white">
-                  <h3 className="font-semibold text-[var(--hc-navy)]">{f.title}</h3>
+                  <h3 className="font-semibold text-navy ">{f.title}</h3>
                 </div>
               </div>
             </Reveal>

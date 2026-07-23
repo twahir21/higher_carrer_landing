@@ -9,17 +9,17 @@ export default function AboutPreview() {
       <div className="container-hc grid lg:grid-cols-2 gap-14 items-center">
         <Reveal>
           <span className="eyebrow">About Higher Career Academy</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3 mb-5 leading-tight">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3 mb-5 leading-tight">
             More than a school &mdash; a foundation for life
           </h2>
-          <p className="text-[var(--hc-slate)] leading-relaxed mb-5">
+          <p className="text-slate leading-relaxed mb-5">
             Since 2012, Higher Career Academy has grown from a single nursery
             classroom into a full nursery and primary institution serving
             families across Dar es Salaam. We combine the discipline of the
             Tanzanian national curriculum with a warm, child-centred approach
             that helps young learners build character alongside competence.
           </p>
-          <p className="text-[var(--hc-slate)] leading-relaxed mb-8">
+          <p className="text-slate leading-relaxed mb-8">
             Our campus is designed for young learners: bright classrooms,
             secure play areas, and spaces that invite curiosity at every turn.
           </p>

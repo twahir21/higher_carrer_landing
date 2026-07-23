@@ -14,7 +14,7 @@ export default function Accordion({ items }) {
         return (
           <div
             key={item.q}
-            className="rounded-2xl border border-[var(--hc-line)] bg-white overflow-hidden"
+            className="rounded-2xl border border-line bg-white overflow-hidden"
           >
             <button
               onClick={() => setOpenIndex(isOpen ? -1 : i)}
@@ -25,7 +25,7 @@ export default function Accordion({ items }) {
               <motion.span
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.25 }}
-                className="shrink-0 text-[var(--hc-blue)]"
+                className="shrink-0 text-brand"
               >
                 <ChevronDown size={20} />
               </motion.span>
@@ -39,7 +39,7 @@ export default function Accordion({ items }) {
                   transition={{ duration: 0.25, ease: "easeInOut" }}
                   className="overflow-hidden"
                 >
-                  <p className="px-6 pb-5 text-sm text-[var(--hc-slate)] leading-relaxed">
+                  <p className="px-6 pb-5 text-sm text-slate leading-relaxed">
                     {item.a}
                   </p>
                 </motion.div>

@@ -20,11 +20,11 @@ const PROGRAMS = [
 
 export default function ProgramsOverview() {
   return (
-    <section className="section-pad bg-[var(--hc-cream)]">
+    <section className="section-pad bg-cream">
       <div className="container-hc">
         <Reveal className="max-w-2xl mb-14">
           <span className="eyebrow">Academic Programs</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
             A clear path from nursery to Standard VII
           </h2>
         </Reveal>
@@ -33,7 +33,7 @@ export default function ProgramsOverview() {
           {PROGRAMS.map((p, i) => (
             <Reveal key={p.title} delay={i * 0.1}>
               <div className="group rounded-3xl overflow-hidden card-shadow bg-white h-full flex flex-col">
-                <div className="relative aspect-[16/9]">
+                <div className="relative aspect-video">
                   <PhotoPlaceholder
                     label={`Photo: ${p.title} classroom`}
                     tone={p.tone}
@@ -42,15 +42,15 @@ export default function ProgramsOverview() {
                 </div>
                 <div className="p-8 flex flex-col flex-1">
                   <span className="eyebrow mb-2">{p.tag}</span>
-                  <h3 className="font-display text-xl font-semibold text-[var(--hc-navy)] mb-3">
+                  <h3 className="font-display text-xl font-semibold text-navy mb-3">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-[var(--hc-slate)] leading-relaxed mb-6 flex-1">
+                  <p className="text-sm text-slate leading-relaxed mb-6 flex-1">
                     {p.text}
                   </p>
                   <Link
                     href="/academics"
-                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--hc-blue)] group-hover:gap-2.5 transition-all"
+                    className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand group-hover:gap-2.5 transition-all"
                   >
                     View curriculum <ArrowRight size={16} />
                   </Link>

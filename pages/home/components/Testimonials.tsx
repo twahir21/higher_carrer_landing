@@ -25,7 +25,7 @@ export default function Testimonials() {
       <div className="container-hc">
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="eyebrow">Parent Testimonials</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
             Trusted by families across Dar es Salaam
           </h2>
         </Reveal>
@@ -34,7 +34,7 @@ export default function Testimonials() {
           {REVIEWS.map((r, i) => (
             <Reveal key={r.name} delay={i * 0.08}>
               <div className="h-full rounded-2xl bg-white p-7 card-shadow flex flex-col">
-                <div className="flex gap-1 mb-4 text-[var(--hc-amber)]">
+                <div className="flex gap-1 mb-4 text-amber">
                   {Array.from({ length: 5 }).map((_, s) => (
                     <Star key={s} size={16} fill="currentColor" strokeWidth={0} />
                   ))}
@@ -43,12 +43,12 @@ export default function Testimonials() {
                   &ldquo;{r.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-full bg-[var(--hc-sky)] flex items-center justify-center font-display font-semibold text-[var(--hc-blue)]">
+                  <div className="h-10 w-10 rounded-full bg-sky flex items-center justify-center font-display font-semibold text-brand">
                     {r.name.charAt(0)}
                   </div>
                   <div>
                     <p className="text-sm font-semibold text-[var(--hc-navy)]">{r.name}</p>
-                    <p className="text-xs text-[var(--hc-slate)]">{r.role}</p>
+                    <p className="text-xs text-slate">{r.role}</p>
                   </div>
                 </div>
               </div>

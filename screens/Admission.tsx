@@ -45,7 +45,7 @@ export default function AdmissionsPage() {
         <div className="container-hc">
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">Admission Process</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
               Four simple steps to enrolment
             </h2>
           </Reveal>
@@ -58,7 +58,7 @@ export default function AdmissionsPage() {
         <div className="container-hc">
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">Requirements</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
               What you'll need to apply
             </h2>
           </Reveal>
@@ -66,11 +66,11 @@ export default function AdmissionsPage() {
             {REQUIREMENTS.map((r, i) => (
               <Reveal key={r.title} delay={i * 0.07}>
                 <div className="h-full rounded-2xl bg-white p-6 card-shadow">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[var(--hc-sky)] text-[var(--hc-blue)] mb-4">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-sky text-brand mb-4">
                     <r.icon size={20} />
                   </div>
-                  <h3 className="font-semibold text-[var(--hc-navy)] mb-1.5">{r.title}</h3>
-                  <p className="text-sm text-[var(--hc-slate)] leading-relaxed">{r.text}</p>
+                  <h3 className="font-semibold text-navy mb-1.5">{r.title}</h3>
+                  <p className="text-sm text-slate leading-relaxed">{r.text}</p>
                 </div>
               </Reveal>
             ))}
@@ -83,19 +83,19 @@ export default function AdmissionsPage() {
         <div className="container-hc">
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">Fees Information</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
               Transparent, family-friendly fee structure
             </h2>
-            <p className="text-[var(--hc-slate)] mt-4">
+            <p className="text-slate mt-4">
               Figures below are placeholders &mdash; please contact our accounts
               office for the current fee schedule and available payment plans.
             </p>
           </Reveal>
 
-          <Reveal className="overflow-x-auto rounded-2xl border border-[var(--hc-line)]">
+          <Reveal className="overflow-x-auto rounded-2xl border border-line">
             <table className="w-full text-left border-collapse min-w-[560px]">
               <thead>
-                <tr className="bg-[var(--hc-navy)] text-white text-sm">
+                <tr className="bg-navytext-white text-sm">
                   <th className="px-6 py-4 font-semibold">Level</th>
                   <th className="px-6 py-4 font-semibold">Tuition (per term)</th>
                   <th className="px-6 py-4 font-semibold">Registration Fee</th>
@@ -105,8 +105,8 @@ export default function AdmissionsPage() {
                 {FEES.map((f, i) => (
                   <tr key={f.level} className={i % 2 ? "bg-[var(--hc-sky-2)]" : "bg-white"}>
                     <td className="px-6 py-4 font-medium text-[var(--hc-navy)]">{f.level}</td>
-                    <td className="px-6 py-4 text-sm text-[var(--hc-slate)]">{f.tuition}</td>
-                    <td className="px-6 py-4 text-sm text-[var(--hc-slate)]">{f.registration}</td>
+                    <td className="px-6 py-4 text-sm text-slate">{f.tuition}</td>
+                    <td className="px-6 py-4 text-sm text-slate">{f.registration}</td>
                   </tr>
                 ))}
               </tbody>
@@ -126,7 +126,7 @@ export default function AdmissionsPage() {
         <div className="container-hc max-w-3xl">
           <Reveal className="text-center mb-12">
             <span className="eyebrow">Frequently Asked Questions</span>
-            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+            <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
               Admissions FAQ
             </h2>
           </Reveal>

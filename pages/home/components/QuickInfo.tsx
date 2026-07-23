@@ -33,12 +33,12 @@ export default function QuickInfo() {
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {ITEMS.map((item, i) => (
             <Reveal key={item.title} delay={i * 0.08}>
-              <div className="h-full rounded-2xl bg-white p-6 card-shadow border border-[var(--hc-line)] hover:-translate-y-1.5 transition-transform">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--hc-sky)] text-[var(--hc-blue)] mb-4">
+              <div className="h-full rounded-2xl bg-white p-6 card-shadow border border-line hover:-translate-y-1.5 transition-transform">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky text-brand mb-4">
                   <item.icon size={22} />
                 </div>
-                <h3 className="font-semibold text-[var(--hc-navy)] mb-1.5">{item.title}</h3>
-                <p className="text-sm text-[var(--hc-slate)] leading-relaxed">{item.text}</p>
+                <h3 className="font-semibold text-navy mb-1.5">{item.title}</h3>
+                <p className="text-sm text-slate leading-relaxed">{item.text}</p>
               </div>
             </Reveal>
           ))}

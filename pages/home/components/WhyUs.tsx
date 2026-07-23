@@ -47,7 +47,7 @@ export default function WhyChooseUs() {
       <div className="container-hc">
         <Reveal className="max-w-2xl mx-auto text-center mb-14">
           <span className="eyebrow">Why Choose Us</span>
-          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-[var(--hc-navy)] mt-3">
+          <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
             What sets Higher Career Academy apart
           </h2>
         </Reveal>
@@ -55,12 +55,12 @@ export default function WhyChooseUs() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {REASONS.map((r, i) => (
             <Reveal key={r.title} delay={i * 0.06}>
-              <div className="h-full rounded-2xl border border-[var(--hc-line)] p-7 hover:border-[var(--hc-blue-light)] hover:card-shadow transition-all">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[var(--hc-navy)] text-white mb-5">
+              <div className="h-full rounded-2xl border border-line p-7 hover:border-brand-light hover:card-shadow transition-all">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navytext-white mb-5">
                   <r.icon size={22} />
                 </div>
-                <h3 className="font-semibold text-[var(--hc-navy)] mb-2">{r.title}</h3>
-                <p className="text-sm text-[var(--hc-slate)] leading-relaxed">{r.text}</p>
+                <h3 className="font-semibold text-navy mb-2">{r.title}</h3>
+                <p className="text-sm text-slate leading-relaxed">{r.text}</p>
               </div>
             </Reveal>
           ))}

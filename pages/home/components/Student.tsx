@@ -7,12 +7,12 @@ const ACTIVITIES = ["Football & Athletics", "Music & Drama Club", "Arts & Craft"
 
 export default function StudentActivitiesPreview() {
   return (
-    <section className="section-pad bg-[var(--hc-navy)] text-white overflow-hidden relative">
+    <section className="section-pad bg-navytext-white overflow-hidden relative">
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
       <div className="container-hc relative">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
           <Reveal>
-            <span className="eyebrow text-[var(--hc-amber)]">Beyond the Classroom</span>
+            <span className="eyebrow text-amber">Beyond the Classroom</span>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold mt-3">
               Student activities that build character
             </h2>
