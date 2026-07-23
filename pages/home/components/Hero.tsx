@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Play, ShieldCheck, Star } from "lucide-react";
-import PhotoPlaceholder from "@/components/PhotoPlaceholder";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowRight, Play, ShieldCheck, Star, X } from "lucide-react";
+import Image from "next/image";
+import heroImage from "@/assets/images/hero.png";
+import { useState } from "react";
 
 export default function Hero() {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
   return (
     <section className="relative overflow-hidden bg-sky-2">
       {/* soft ambient shapes */}
@@ -32,7 +35,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-4xl sm:text-5xl lg:text-[3.4rem] font-semibold leading-[1.08] text-navy "
           >
-            Building Tomorrow&apos;s Experts{" "}
+            Building Tomorrow&apos;s Leaders{" "}
             <span className="relative whitespace-nowrap">
               Today
               <svg
@@ -57,9 +60,9 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="mt-6 text-lg text-slate leading-relaxed max-w-xl"
           >
-            Higher Career Academy delivers quality nursery and primary education
-            through qualified teachers, a safe campus, and a curriculum designed
-            to help every child think, create, and grow with confidence.
+            Higher Career Academy provides quality nursery and primary education in Zanzibar
+            through experienced teachers, a safe learning environment, and a child-centered curriculum
+            that helps every learner think creatively, build confidence, and achieve their full potential.
           </motion.p>
 
           <motion.div
@@ -73,6 +76,7 @@ export default function Hero() {
             </Link>
             <button
               className="btn-secondary group"
+              onClick={() => setIsVideoOpen(true)}
             >
               <span className="flex h-8 w-8 items-center justify-center rounded-full bg-sky">
                 <Play
@@ -108,10 +112,13 @@ export default function Hero() {
           className="relative"
         >
           <div className="relative rounded-4xl overflow-hidden card-shadow aspect-4/5 sm:aspect-5/4 lg:aspect-4/5">
-            <PhotoPlaceholder
-              label="Photo: Happy students learning together in a modern Higher Career Academy classroom"
-              tone="sky"
-              className="h-full w-full"
+            <Image
+              src={heroImage}
+              alt="Happy students learning together at Higher Career Academy"
+              fill
+              priority
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover"
             />
           </div>
 
@@ -122,7 +129,7 @@ export default function Hero() {
             className="absolute -bottom-6 -left-6 hidden sm:flex items-center gap-3 rounded-2xl bg-white p-4 pr-6 card-shadow"
           >
             <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky text-brand font-display font-semibold">
-              1:15
+              1:9
             </div>
             <div>
               <p className="text-sm font-semibold text-navy ">Teacher-to-pupil ratio</p>
@@ -141,6 +148,44 @@ export default function Hero() {
           </motion.div>
         </motion.div>
       </div>
+
+      {/* Video modal */}
+      <AnimatePresence>
+        {isVideoOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-navy/80 p-3 sm:p-6"
+            onClick={() => setIsVideoOpen(false)}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ duration: 0.25 }}
+              className="relative w-full max-w-lg sm:max-w-2xl lg:max-w-4xl xl:max-w-5xl aspect-video max-h-[85vh] rounded-xl sm:rounded-2xl overflow-hidden card-shadow bg-black"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                onClick={() => setIsVideoOpen(false)}
+                aria-label="Close video"
+                className="absolute -top-9 right-0 sm:top-3 sm:right-3 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full bg-white/90 text-navy hover:bg-white transition z-10"
+              >
+                <X size={16} className="sm:hidden" />
+                <X size={18} className="hidden sm:block" />
+              </button>
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/iMnZ_v1sjPY?si=hYfPiZ5hcjOAOXyH&autoplay=1"
+                title="Higher Career Academy School Tour"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

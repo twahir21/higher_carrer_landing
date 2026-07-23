@@ -39,7 +39,7 @@ export default function Testimonials() {
                     <Star key={s} size={16} fill="currentColor" strokeWidth={0} />
                   ))}
                 </div>
-                <p className="text-sm text-[var(--hc-ink)] leading-relaxed flex-1 mb-6">
+                <p className="text-sm text-ink leading-relaxed flex-1 mb-6">
                   &ldquo;{r.text}&rdquo;
                 </p>
                 <div className="flex items-center gap-3">
@@ -47,7 +47,7 @@ export default function Testimonials() {
                     {r.name.charAt(0)}
                   </div>
                   <div>
-                    <p className="text-sm font-semibold text-[var(--hc-navy)]">{r.name}</p>
+                    <p className="text-sm font-semibold text-navy">{r.name}</p>
                     <p className="text-xs text-slate">{r.role}</p>
                   </div>
                 </div>

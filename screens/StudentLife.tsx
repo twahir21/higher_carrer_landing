@@ -83,7 +83,7 @@ export default function StudentLifePage() {
                   </div>
                   <div className="p-4 bg-white flex items-center gap-2">
                     <CalendarHeart size={16} className="text-brand" />
-                    <h3 className="text-sm font-semibold text-[var(--hc-navy)]">{e.title}</h3>
+                    <h3 className="text-sm font-semibold text-navy">{e.title}</h3>
                   </div>
                 </div>
               </Reveal>

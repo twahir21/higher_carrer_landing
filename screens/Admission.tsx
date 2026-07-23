@@ -104,7 +104,7 @@ export default function AdmissionsPage() {
               <tbody>
                 {FEES.map((f, i) => (
                   <tr key={f.level} className={i % 2 ? "bg-sky-2" : "bg-white"}>
-                    <td className="px-6 py-4 font-medium text-[var(--hc-navy)]">{f.level}</td>
+                    <td className="px-6 py-4 font-medium text-navy">{f.level}</td>
                     <td className="px-6 py-4 text-sm text-slate">{f.tuition}</td>
                     <td className="px-6 py-4 text-sm text-slate">{f.registration}</td>
                   </tr>

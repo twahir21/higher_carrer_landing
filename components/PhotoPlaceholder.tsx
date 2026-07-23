@@ -12,7 +12,7 @@ export default function PhotoPlaceholder({
 }) {
   const tones = {
     sky: "from-sky to-[#DCE9FF]",
-    navy: "from-[#1B5AC8] to-[var(--hc-navy)]",
+    navy: "from-[#1B5AC8] to-navy",
     amber: "from-[#FFE3BE] to-[#FFD199]",
   };
   const textTone = tone === "navy" ? "text-white/80" : "text-brand";

@@ -21,7 +21,7 @@ export default function Accordion({ items }) {
               aria-expanded={isOpen}
               className="w-full flex items-center justify-between gap-4 text-left px-6 py-5"
             >
-              <span className="font-semibold text-[var(--hc-navy)]">{item.q}</span>
+              <span className="font-semibold text-navy">{item.q}</span>
               <motion.span
                 animate={{ rotate: isOpen ? 180 : 0 }}
                 transition={{ duration: 0.25 }}

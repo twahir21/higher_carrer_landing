@@ -1,11 +1,12 @@
 import Link from "next/link";
 import {
-  GraduationCap,
   MapPin,
   Phone,
   Mail,
   Clock,
 } from "lucide-react";
+import Image from "next/image";
+import logo from "@/assets/images/logo.png";
 
 export default function Footer() {
   return (
@@ -14,8 +15,15 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-white/10 text-white">
-                <GraduationCap size={22} />
+              <span className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-full bg-white shadow-[0_8px_18px_-6px_rgba(27,90,200,0.5)] group-hover:scale-105 transition-transform">
+                <Image
+                  src={logo}
+                  alt="Higher Career Academy Logo"
+                  width={44}
+                  height={44}
+                  priority
+                  className="object-contain"
+                />
               </span>
               <span className="font-display text-lg font-semibold">Higher Career</span>
             </div>

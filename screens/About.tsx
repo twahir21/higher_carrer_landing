@@ -154,7 +154,7 @@ export default function AboutPage() {
               We take our responsibility to your family seriously, and we are
               committed to continuous improvement in everything we do.
             </p>
-            <p className="font-semibold text-[var(--hc-navy)]">Mr. Peter L. Massawe</p>
+            <p className="font-semibold text-navy">Mr. Peter L. Massawe</p>
             <p className="text-sm text-slate">Board Chairperson</p>
           </Reveal>
         </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
                     <PhotoPlaceholder label={t.name} tone={i % 2 ? "amber" : "sky"} className="h-full w-full" />
                   </div>
                   <div className="p-5">
-                    <h3 className="font-semibold text-[var(--hc-navy)]">{t.name}</h3>
+                    <h3 className="font-semibold text-navy">{t.name}</h3>
                     <p className="text-sm text-brand font-medium">{t.role}</p>
                     <p className="text-xs text-slate mt-1">{t.subject}</p>
                   </div>
@@ -201,7 +201,7 @@ export default function AboutPage() {
             {ACHIEVEMENTS.map((a, i) => (
               <Reveal key={a} delay={i * 0.07}>
                 <div className="flex gap-4 rounded-2xl bg-white/5 border border-white/10 p-6">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber text-[var(--hc-navy)]">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-amber text-navy">
                     <Award size={18} />
                   </div>
                   <p className="text-white/85 leading-relaxed">{a}</p>

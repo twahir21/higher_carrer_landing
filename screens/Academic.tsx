@@ -130,7 +130,7 @@ export default function AcademicsPage() {
                 <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navytext-white">
                   <s.icon size={19} />
                 </div>
-                <h3 className="font-semibold text-[var(--hc-navy)]">{s.title}</h3>
+                <h3 className="font-semibold text-navy">{s.title}</h3>
               </div>
             </Reveal>
           ))}

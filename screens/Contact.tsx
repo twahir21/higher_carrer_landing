@@ -40,7 +40,7 @@ export default function ContactPage() {
                   <item.icon size={20} />
                 </div>
                 <div>
-                  <p className="font-semibold text-[var(--hc-navy)]">{item.title}</p>
+                  <p className="font-semibold text-navy">{item.title}</p>
                   <p className="text-sm text-slate">{item.text}</p>
                 </div>
               </div>
@@ -68,7 +68,7 @@ export default function ContactPage() {
             </div>
 
             {/* <div className="flex items-center gap-3 mt-8">
-              <span className="text-sm font-semibold text-[var(--hc-navy)]">Follow us:</span>
+              <span className="text-sm font-semibold text-navy">Follow us:</span>
               {[Facebook, Instagram, Youtube].map((Icon, i) => (
                 <a
                   key={i}
