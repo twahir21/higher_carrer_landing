@@ -7,7 +7,7 @@ import {
   Clock,
   Map,
 } from "lucide-react";
-import PageHero from "./Land";
+import PageHero from "../components/PageHero";
 
 export const metadata = {
   title: "Contact Us | Higher Career Academy",

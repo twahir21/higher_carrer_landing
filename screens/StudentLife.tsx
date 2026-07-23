@@ -1,7 +1,7 @@
 import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { Trophy, Palette, Sparkles, CalendarHeart } from "lucide-react";
-import PageHero from "./Land";
+import PageHero from "../components/PageHero";
 
 export const metadata = {
   title: "Student Life | Higher Career Academy",

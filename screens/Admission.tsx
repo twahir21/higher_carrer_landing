@@ -8,7 +8,7 @@ import {
   IdCard,
   Download,
 } from "lucide-react";
-import PageHero from "./Land";
+import PageHero from "../components/PageHero";
 import ProcessSteps from "@/components/Process";
 import { ADMISSIONS_FAQ } from "@/components/faq";
 

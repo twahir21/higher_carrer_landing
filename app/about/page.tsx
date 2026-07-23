@@ -1,4 +1,4 @@
-import AboutPage from "@/screens/About";
+import AboutPage from "@/pages/about";
 
 export default function About () {
     return <AboutPage />

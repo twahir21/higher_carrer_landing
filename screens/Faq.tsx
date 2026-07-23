@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 import Accordion from "@/components/Accordion";
 import Link from "next/link";
 import { PhoneCall, ArrowRight } from "lucide-react";
-import PageHero from "./Land";
+import PageHero from "../components/PageHero";
 import { GENERAL_FAQ } from "@/components/faq";
 
 export const metadata = {

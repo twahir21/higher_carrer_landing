@@ -1,7 +1,7 @@
 import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { Eye, Target, HeartHandshake, Award } from "lucide-react";
-import PageHero from "./Land";
+import PageHero from "@/components/PageHero";
 
 export const metadata = {
   title: "About Us | Higher Career Academy",
@@ -45,7 +45,7 @@ export default function AboutPage() {
       <section className="section-pad">
         <div className="container-hc grid lg:grid-cols-2 gap-14 items-center">
           <Reveal>
-            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-[4/3]">
+            <div className="relative rounded-3xl overflow-hidden card-shadow aspect-4/3">
               <PhotoPlaceholder label="Photo: Original school building, early years" tone="sky" className="h-full w-full" />
             </div>
           </Reveal>
@@ -189,7 +189,7 @@ export default function AboutPage() {
       </section>
 
       {/* Achievements */}
-      <section className="section-pad bg-navytext-white">
+      <section className="section-pad bg-navy text-white">
         <div className="container-hc">
           <Reveal className="max-w-2xl mb-12">
             <span className="eyebrow text-amber">Achievements</span>

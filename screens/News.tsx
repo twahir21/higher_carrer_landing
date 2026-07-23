@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import Link from "next/link";
 import { CalendarDays } from "lucide-react";
-import PageHero from "./Land";
+import PageHero from "../components/PageHero";
 import { NEWS } from "@/core/constants/Events";
 
 export const metadata = {
