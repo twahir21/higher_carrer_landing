@@ -2,7 +2,7 @@ import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { StaggerGroup, StaggerItem } from "@/components/StaggerGrp";
 
-const FACILITIES = [
+const FACILITIES: { title: string; tone: "sky" | "amber" | "navy" | undefined}[] = [
   { title: "Modern Classrooms", tone: "sky" },
   { title: "School Library", tone: "amber" },
   { title: "Playground & Play Equipment", tone: "amber" },

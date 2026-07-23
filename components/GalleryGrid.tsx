@@ -6,7 +6,9 @@ import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 
 const CATEGORIES = ["All", "Classrooms", "Campus", "Events", "Activities"];
 
-const IMAGES = [
+type Images = { label: string; cat: string; tone: "sky" | "amber" | "navy" | undefined }[]
+
+const IMAGES: Images = [
   { label: "Nursery classroom in session", cat: "Classrooms", tone: "sky" },
   { label: "Primary classroom lesson", cat: "Classrooms", tone: "amber" },
   { label: "School gate and entrance", cat: "Campus", tone: "sky" },
@@ -47,7 +49,7 @@ export default function GalleryGrid() {
         ))}
       </div>
 
-      <motion.div layout className="columns-2 sm:columns-3 lg:columns-4 gap-4 [column-fill:_balance]">
+      <motion.div layout className="columns-2 sm:columns-3 lg:columns-4 gap-4 [column-fill:balance]">
         {filtered.map((img, i) => (
           <motion.div
             layout
@@ -60,7 +62,7 @@ export default function GalleryGrid() {
             <PhotoPlaceholder
               label={img.label}
               tone={img.tone}
-              className={i % 3 === 0 ? "aspect-[3/4]" : "aspect-square"}
+              className={i % 3 === 0 ? "aspect-3/4" : "aspect-square"}
             />
           </motion.div>
         ))}

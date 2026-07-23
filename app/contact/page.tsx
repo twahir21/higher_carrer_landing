@@ -1,4 +1,4 @@
-import ContactPage from "@/screens/Contact";
+import ContactPage from "@/pages/contactPage";
 
 export default function Contact () {
     return <ContactPage />

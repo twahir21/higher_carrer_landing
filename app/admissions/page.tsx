@@ -1,4 +1,4 @@
-import AdmissionsPage from "@/screens/Admission";
+import AdmissionsPage from "@/pages/admissionPage";
 
 export default function Admissions () {
     return <AdmissionsPage />

@@ -1,13 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
+import React from "react";
 
 export default function Reveal({
   children,
   delay = 0,
   y = 24,
   className = "",
-  once = true,
+  once = false,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  y?: number;
+  once?: boolean;
+  className?: string;
 }) {
   return (
     <motion.div

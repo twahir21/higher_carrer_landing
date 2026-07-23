@@ -1,4 +1,4 @@
-import FaqPage from "@/screens/Faq";
+import FaqPage from "@/pages/faqPage";
 
 export default function FAQ () {
     return <FaqPage />

@@ -3,7 +3,12 @@ import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { ArrowRight } from "lucide-react";
 
-const PROGRAMS = [
+const PROGRAMS: {
+  tag: string;
+  title: string;
+  text: string;
+  tone: "sky" | "amber" | "navy" | undefined
+}[] = [
   {
     tag: "Ages 2 – 5",
     title: "Nursery Programme",
