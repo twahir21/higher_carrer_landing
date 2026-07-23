@@ -95,7 +95,7 @@ export default function AdmissionsPage() {
           <Reveal className="overflow-x-auto rounded-2xl border border-line">
             <table className="w-full text-left border-collapse min-w-[560px]">
               <thead>
-                <tr className="bg-navytext-white text-sm">
+                <tr className="bg-navy text-white text-sm">
                   <th className="px-6 py-4 font-semibold">Level</th>
                   <th className="px-6 py-4 font-semibold">Tuition (per term)</th>
                   <th className="px-6 py-4 font-semibold">Registration Fee</th>

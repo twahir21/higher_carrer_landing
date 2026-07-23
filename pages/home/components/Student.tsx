@@ -7,7 +7,7 @@ const ACTIVITIES = ["Football & Athletics", "Music & Drama Club", "Arts & Craft"
 
 export default function StudentActivitiesPreview() {
   return (
-    <section className="section-pad bg-navytext-white overflow-hidden relative">
+    <section className="section-pad bg-navy text-white overflow-hidden relative">
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-80 w-80 rounded-full bg-white/5 blur-3xl" />
       <div className="container-hc relative">
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">

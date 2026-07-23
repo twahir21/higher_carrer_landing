@@ -76,7 +76,7 @@ export default function AboutPage() {
       <section className="section-pad bg-sky-2">
         <div className="container-hc grid md:grid-cols-2 gap-6">
           <Reveal>
-            <div className="h-full rounded-3xl bg-white p-9 card-shadow">
+            <div className="h-full rounded-3xl bg-white p-9 card-shadow border border-line">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-sky text-brand mb-5">
                 <Eye size={22} />
               </div>
@@ -88,8 +88,9 @@ export default function AboutPage() {
               </p>
             </div>
           </Reveal>
+
           <Reveal delay={0.1}>
-            <div className="h-full rounded-3xl bg-navytext-white p-9 card-shadow">
+            <div className="h-full rounded-3xl bg-navy text-white p-9 card-shadow">
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 mb-5">
                 <Target size={22} />
               </div>
@@ -103,6 +104,33 @@ export default function AboutPage() {
             </div>
           </Reveal>
         </div>
+
+        {/* School Motto */}
+        <Reveal delay={0.15}>
+          <div className="container-hc mt-6">
+            <div className="relative overflow-hidden rounded-3xl bg-cream border border-line p-8 sm:p-12 text-center">
+              {/* decorative accent shapes */}
+              <div className="pointer-events-none absolute -top-10 -left-10 h-40 w-40 rounded-full bg-amber/10 blur-2xl" />
+              <div className="pointer-events-none absolute -bottom-10 -right-10 h-40 w-40 rounded-full bg-coral/10 blur-2xl" />
+
+              <div className="relative">
+                <span className="inline-flex items-center gap-2 rounded-full bg-amber/15 px-4 py-1.5 mb-5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-amber" />
+                  <span className="text-xs font-semibold uppercase tracking-widest text-navy">
+                    Our Motto
+                  </span>
+                </span>
+
+                {/* TODO: replace with your actual school motto */}
+                <p className="font-display text-2xl sm:text-4xl font-semibold text-navy leading-snug">
+                  &ldquo;Knowledge, Character, Excellence&rdquo;
+                </p>
+
+                <div className="mx-auto mt-5 h-1 w-14 rounded-full bg-amber" />
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       {/* Core Values */}

@@ -127,7 +127,7 @@ export default function AcademicsPage() {
           {PRIMARY_SUBJECTS.map((s, i) => (
             <Reveal key={s.title} delay={i * 0.06}>
               <div className="flex items-center gap-4 rounded-2xl bg-white p-5 card-shadow">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navytext-white">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy text-white">
                   <s.icon size={19} />
                 </div>
                 <h3 className="font-semibold text-navy">{s.title}</h3>
@@ -165,7 +165,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Exam prep */}
-      <section className="section-pad bg-navytext-white">
+      <section className="section-pad bg-navy text-white">
         <div className="container-hc grid lg:grid-cols-2 gap-14 items-center">
           <Reveal>
             <span className="eyebrow text-amber">Examination Preparation</span>

@@ -31,7 +31,7 @@ export default function FaqPage() {
       <section className="pb-24">
         <div className="container-hc">
           <Reveal>
-            <div className="rounded-3xl bg-navytext-white px-8 py-12 sm:px-14 sm:py-14 text-center">
+            <div className="rounded-3xl bg-navy text-white px-8 py-12 sm:px-14 sm:py-14 text-center">
               <h2 className="font-display text-2xl sm:text-3xl font-semibold mb-3">
                 Still have questions?
               </h2>

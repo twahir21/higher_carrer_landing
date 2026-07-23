@@ -5,9 +5,12 @@ import {
   Phone,
   Mail,
   Clock,
-  Map,
+  ExternalLink,
 } from "lucide-react";
 import PageHero from "../components/PageHero";
+import Link from "next/link";
+import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
+
 
 export const metadata = {
   title: "Contact Us | Higher Career Academy",
@@ -16,8 +19,8 @@ export const metadata = {
 };
 
 const INFO = [
-  { icon: MapPin, title: "Visit Us", text: "Plot 24, Mikocheni Street, Zanzibar, Tanzania" },
-  { icon: Phone, title: "Call Us", text: "+255 700 000 000" },
+  { icon: MapPin, title: "Visit Us", text: "V976+PR5, Amaani, mkabala na Amani stadium, Dunga Kiembeni, Zanzibar" },
+  { icon: Phone, title: "Call Us", text: " 0777 343 414 / 0776 578 657" },
   { icon: Mail, title: "Email Us", text: "info@highercareeracademy.ac.tz" },
   { icon: Clock, title: "Working Hours", text: "Mon – Fri, 7:00 AM – 5:00 PM" },
 ];
@@ -60,16 +63,33 @@ export default function ContactPage() {
             <h2 className="font-display text-2xl font-semibold text-navy mb-6">
               Find us on the map
             </h2>
-            <div className="rounded-2xl overflow-hidden card-shadow aspect-[4/5] bg-sky flex flex-col items-center justify-center gap-3 text-brand">
-              <Map size={36} strokeWidth={1.6} />
-              <p className="text-sm font-medium px-6 text-center">
-                Google Maps embed placeholder — Mikocheni Street, Zanzibar
-              </p>
+
+            <div className="space-y-4">
+              <div className="rounded-2xl overflow-hidden card-shadow aspect-4/5">
+                <iframe
+                  title="Higher Career Academy Location"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.5212666361547!2d39.359545!3d-6.135729499999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185d29c7bd114ef7%3A0xdca4e8d9e0fe08ad!2sHigher%20Career%20Academy!5e0!3m2!1sen!2stz!4v1711004824659!5m2!1sen!2stz"
+                  className="w-full h-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+              </div>
+
+              <Link
+                href="https://www.google.com/maps/dir/-6.852042,39.2894836/higher+career+academy+location/@-6.4816381,38.9349168,10z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x185d29c7bd114ef7:0xdca4e8d9e0fe08ad!2m2!1d39.3621196!2d-6.1357295?entry=ttu"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-brand hover:underline"
+              >
+                Get Directions
+                <ExternalLink size={16} />
+              </Link>
             </div>
 
-            {/* <div className="flex items-center gap-3 mt-8">
+            <div className="flex items-center gap-3 mt-8">
               <span className="text-sm font-semibold text-navy">Follow us:</span>
-              {[Facebook, Instagram, Youtube].map((Icon, i) => (
+              {[FaFacebook, FaInstagram, FaYoutube, FaWhatsapp, FaTiktok].map((Icon, i) => (
                 <a
                   key={i}
                   href="#"
@@ -79,7 +99,7 @@ export default function ContactPage() {
                   <Icon size={17} />
                 </a>
               ))}
-            </div> */}
+            </div>
           </Reveal>
         </div>
       </section>

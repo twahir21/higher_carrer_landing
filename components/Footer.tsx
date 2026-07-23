@@ -76,8 +76,8 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="space-y-3 text-sm text-white/80">
-              <li className="flex gap-2.5"><MapPin size={17} className="shrink-0 mt-0.5 text-amber" /> Plot 24, Mikocheni Street, Zanzibar, Tanzania</li>
-              <li className="flex gap-2.5"><Phone size={17} className="shrink-0 mt-0.5 text-amber" /> +255 700 000 000</li>
+              <li className="flex gap-2.5"><MapPin size={17} className="shrink-0 mt-0.5 text-amber" /> V976+PR5, Amaani, mkabala na Amani stadium, Dunga Kiembeni, Zanzibar</li>
+              <li className="flex gap-2.5"><Phone size={17} className="shrink-0 mt-0.5 text-amber" />  0777 343 414 / 0776 578 657</li>
               <li className="flex gap-2.5"><Mail size={17} className="shrink-0 mt-0.5 text-amber" /> info@highercareeracademy.ac.tz</li>
               <li className="flex gap-2.5"><Clock size={17} className="shrink-0 mt-0.5 text-amber" /> Mon &ndash; Fri, 7:00 AM &ndash; 5:00 PM</li>
             </ul>
