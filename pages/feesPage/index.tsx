@@ -106,7 +106,7 @@ const primary: LevelData = {
 function FeeTable({ headers, rows, totalLabel, totalValue, accent }: FeeTableProps) {
   const totalClasses =
     accent === "primary"
-      ? "bg-amber text-navy"
+      ? "bg-amber-dark text-white"
       : "bg-navy text-white";
 
   return (
@@ -192,7 +192,7 @@ function LevelPanel({ data, level }: LevelPanelProps) {
                 <li key={i} className="flex gap-2.5 text-sm text-ink leading-relaxed">
                   <span
                     className={`mt-2 h-1 w-1 shrink-0 rounded-full ${
-                      level === "primary" ? "bg-amber" : "bg-brand"
+                      level === "primary" ? "bg-amber-dark" : "bg-brand"
                     }`}
                   />
                   {m}
@@ -240,10 +240,10 @@ function PaymentInfo({ level }: PaymentInfoProps) {
     }
   };
 
-  const cardClasses = isPrimary ? "bg-amber text-navy" : "bg-navy text-white";
+  const cardClasses = isPrimary ? "bg-amber-dark text-white" : "bg-navy text-white";
   const iconWrapClasses = isPrimary ? "bg-navy/10" : "bg-white/10";
-  const bodyTextClasses = isPrimary ? "text-navy/70" : "text-white/70";
-  const labelClasses = isPrimary ? "text-navy/50" : "text-white/50";
+  const bodyTextClasses = isPrimary ? "text-white/70" : "text-white/70";
+  const labelClasses = isPrimary ? "text-white/50" : "text-white/50";
   const copyBtnClasses = isPrimary
     ? "bg-navy/10 hover:bg-navy/20"
     : "bg-white/10 hover:bg-white/20";
@@ -318,7 +318,7 @@ export default function FeesPage() {
                 ] as const).map((tab) => {
                   const isActive = level === tab.key;
                   const activeColor =
-                    tab.key === "primary" ? "bg-amber" : "bg-navy";
+                    tab.key === "primary" ? "bg-amber-dark" : "bg-navy";
                   return (
                     <button
                       key={tab.key}

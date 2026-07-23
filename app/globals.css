@@ -15,6 +15,7 @@
   --hc-cream: #FCFBF8;     /* warm off-white bg for alt sections */
 
   --background: #ffffff;
+  --hc-amber-dark: #D9912B;
   --foreground: var(--hc-ink);
 }
 
@@ -31,6 +32,7 @@
   --color-ink: var(--hc-ink);
   --color-slate: var(--hc-slate);
   --color-line: var(--hc-line);
+  --color-amber-dark: var(--hc-amber-dark);
   --color-cream: var(--hc-cream);
   --font-display: var(--font-fraunces);
   --font-sans: var(--font-inter);
