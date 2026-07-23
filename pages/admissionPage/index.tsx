@@ -8,9 +8,9 @@ import {
   IdCard,
   Download,
 } from "lucide-react";
-import PageHero from "../components/PageHero";
 import ProcessSteps from "@/components/Process";
-import { ADMISSIONS_FAQ } from "@/components/faq";
+import { ADMISSIONS_FAQ } from "@/constants/faq";
+import PageHero from "@/components/PageHero";
 
 export const metadata = {
   title: "Admissions | Higher Career Academy",
@@ -59,7 +59,7 @@ export default function AdmissionsPage() {
           <Reveal className="max-w-2xl mx-auto text-center mb-14">
             <span className="eyebrow">Requirements</span>
             <h2 className="font-display text-3xl sm:text-4xl font-semibold text-navy mt-3">
-              What you'll need to apply
+              What you&apos;ll need to apply
             </h2>
           </Reveal>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -93,7 +93,7 @@ export default function AdmissionsPage() {
           </Reveal>
 
           <Reveal className="overflow-x-auto rounded-2xl border border-line">
-            <table className="w-full text-left border-collapse min-w-[560px]">
+            <table className="w-full text-left border-collapse min-w-140">
               <thead>
                 <tr className="bg-navy text-white text-sm">
                   <th className="px-6 py-4 font-semibold">Level</th>

@@ -1,5 +1,5 @@
 import GalleryGrid from "@/components/GalleryGrid";
-import PageHero from "../components/PageHero";
+import PageHero from "@/components/PageHero";
 
 export const metadata = {
   title: "Gallery | Higher Career Academy",

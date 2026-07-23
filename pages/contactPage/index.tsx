@@ -7,9 +7,9 @@ import {
   Clock,
   ExternalLink,
 } from "lucide-react";
-import PageHero from "../components/PageHero";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTiktok, FaWhatsapp, FaYoutube } from 'react-icons/fa6';
+import PageHero from "@/components/PageHero";
 
 
 export const metadata = {

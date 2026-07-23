@@ -2,7 +2,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PhotoPlaceholder from "@/components/PhotoPlaceholder";
 import { ArrowRight, CalendarDays } from "lucide-react";
-import { NEWS } from "@/core/constants/Events";
+import { NEWS } from "@/constants/Events";
 
 export default function NewsPreview() {
   const items = NEWS.slice(0, 3);

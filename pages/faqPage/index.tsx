@@ -2,8 +2,8 @@ import Reveal from "@/components/Reveal";
 import Accordion from "@/components/Accordion";
 import Link from "next/link";
 import { PhoneCall, ArrowRight } from "lucide-react";
-import PageHero from "../components/PageHero";
-import { GENERAL_FAQ } from "@/components/faq";
+import { GENERAL_FAQ } from "@/constants/faq";
+import PageHero from "@/components/PageHero";
 
 export const metadata = {
   title: "FAQ | Higher Career Academy",
@@ -37,7 +37,7 @@ export default function FaqPage() {
               </h2>
               <p className="text-white/75 max-w-xl mx-auto mb-8">
                 Our admissions team is happy to walk you through anything
-                that's not covered here.
+                that&apos;s not covered here.
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/contact" className="rounded-full bg-white text-navy font-semibold px-7 py-3.5 inline-flex items-center gap-2 hover:-translate-y-1 transition-transform">

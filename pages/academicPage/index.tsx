@@ -15,7 +15,7 @@ import {
   Trophy,
   ArrowRight,
 } from "lucide-react";
-import PageHero from "../components/PageHero";
+import PageHero from "@/components/PageHero";
 
 export const metadata = {
   title: "Academics | Higher Career Academy",

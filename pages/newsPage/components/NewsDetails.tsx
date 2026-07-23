@@ -3,7 +3,7 @@ import Reveal from "@/components/Reveal";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CalendarDays, ArrowLeft, ArrowRight } from "lucide-react";
-import { NEWS } from "@/core/constants/Events";
+import { NEWS } from "@/constants/Events";
 
 export function generateStaticParams() {
   return NEWS.map((n) => ({ slug: n.slug }));
